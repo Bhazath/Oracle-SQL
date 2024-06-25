@@ -91,3 +91,44 @@ INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno)
 VALUES (7934, 'MILLER', 'CLERK', 7782, TO_DATE('1982-01-23', 'YYYY-MM-DD'), 1300, NULL, 10);
 ```
 
+# Insert Data into dept Table:
+
+```
+INSERT INTO dept (deptno, dname, loc)
+VALUES (10, 'ACCOUNTING', 'NEW YORK');
+
+INSERT INTO dept (deptno, dname, loc)
+VALUES (20, 'RESEARCH', 'DALLAS');
+
+INSERT INTO dept (deptno, dname, loc)
+VALUES (30, 'SALES', 'CHICAGO');
+
+INSERT INTO dept (deptno, dname, loc)
+VALUES (40, 'OPERATIONS', 'BOSTON');
+
+```
+
+# Insert Data into salgrade Table:
+
+```
+INSERT INTO salgrade (grade, losal, hisal)
+VALUES (1, 700, 1200);
+
+INSERT INTO salgrade (grade, losal, hisal)
+VALUES (2, 1201, 1400);
+
+INSERT INTO salgrade (grade, losal, hisal)
+VALUES (3, 1401, 2000);
+
+INSERT INTO salgrade (grade, losal, hisal)
+VALUES (4, 2001, 3000);
+
+INSERT INTO salgrade (grade, losal, hisal)
+VALUES (5, 3001, 9999);
+
+```
+
+# Insert Data into BONUS Table 
+```
+
+```
