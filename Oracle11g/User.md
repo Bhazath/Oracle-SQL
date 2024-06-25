@@ -80,3 +80,40 @@ CONNECT new_user/password123;
 - The `SYS` user or a user with `DBA` privileges (`SYSDBA` role) is required to create new users and grant privileges.
   
 This process should help you create a new user in Oracle SQL effectively. Adjust the statements as per your specific requirements and security policies.
+
+#
+
+## Query the DBA_USERS view:
+
+Once connected, you can query the DBA_USERS view to get a list of all users in the database:
+
+```
+SELECT username, account_status, created
+FROM dba_users; # or FROM all_users; # or From user_users;
+```
+This query retrieves the username, account_status (like OPEN, LOCKED, etc.), and created (date when the user was created) for each user in the database.
+# 
+## Important Notes:
+- Access to DBA_USERS and ALL_USERS requires appropriate privileges (SELECT_CATALOG_ROLE or DBA role).
+- When querying DBA_USERS, you will see all users across the entire database.
+- ALL_USERS shows users visible to your current user session, while USER_USERS shows information specifically about the   current user.
+  
+By using these queries, you can effectively view all users in an Oracle database and their relevant details such as account status and creation date. Adjust your query based on your specific access and visibility needs within the database environment.
+#
+# Summary of Differences:
+
+- ALL_USERS: Provides visibility into all users across the entire database that are visible to the current user session, typically requires SELECT_CATALOG_ROLE.
+
+- USER_USERS: Shows information about the user currently logged in, which is useful for self-checking without requiring elevated privileges.
+
+- DBA_USERS: Offers comprehensive information about all users in the database, regardless of current user session, requires DBA role or direct privilege on the view.
+
+These views cater to different needs based on the level of access and information required about users within an Oracle database environment.
+
+
+
+
+
+
+
+
